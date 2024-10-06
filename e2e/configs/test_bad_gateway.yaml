@@ -1,0 +1,7 @@
+port: 8000
+endpoints:
+    - from: /
+      pool:
+        # We'll use port 0 since we know nothing will be listening on it
+        - http://localhost:0
+

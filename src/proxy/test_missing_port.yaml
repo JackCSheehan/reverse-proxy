@@ -1,0 +1,13 @@
+endpoints:
+    - from: /home
+      pool:
+        - http://localhost:1001/about
+        - http://localhost:1002/info
+        - http://localhost:1003/contact
+    - from: /
+      pool:
+        - http://localhost:1001
+        - http://localhost:1002
+    - from: post
+      pool:
+        - http://localhost:1001/comments

@@ -1,0 +1,9 @@
+port: 8000
+endpoints:
+    - from: /
+      pool:
+        - http://localhost:5000/index-proxied-5000
+        - http://localhost:5001/index-proxied-5001
+        - http://localhost:5002/index-proxied-5002
+        
+

@@ -1,0 +1,10 @@
+port: 8000
+endpoints:
+    - from: /index
+      pool:
+        - http://localhost:5000/index-proxied
+    - from: /home
+      pool:
+        - http://localhost:5001/home-proxied
+        
+

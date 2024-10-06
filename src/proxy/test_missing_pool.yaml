@@ -1,0 +1,10 @@
+port: 9001
+endpoints:
+    - from: /home
+    - from: /
+      pool:
+        - http://localhost:1001
+        - http://localhost:1002
+    - from: post
+      pool:
+        - http://localhost:1001/comments
